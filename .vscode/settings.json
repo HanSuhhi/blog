@@ -1,0 +1,29 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[ts]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue"
+  ],
+  "stylelint.validate": [
+    "vue",
+    "css"
+  ],
+  "window.zoomLevel": 0,
+  // The path to the `bun` executable.
+  "bun.runtime": "~/.bun/bin",
+  // If support for Bun should be added to the default "JavaScript Debug Terminal".
+  "bun.debugTerminal.enabled": true,
+}
