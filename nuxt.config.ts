@@ -4,7 +4,13 @@ export default defineNuxtConfig({
   css: [
     Bun.resolveSync("assets/styles/index.css", import.meta.dir)
   ],
+  modules: [
+    "@nuxtjs/eslint-module"
+  ],
+  typescript: {
+    typeCheck: true
+  },
   devServer: {
     port: 51714
   }
-})
+});

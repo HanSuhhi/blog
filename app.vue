@@ -1,7 +1,8 @@
+<script lang="ts">
+</script>
+
 <template>
-  <NuxtLayout>
-    
-  </NuxtLayout>
+  <NuxtLayout />
 </template>
 
 <style>

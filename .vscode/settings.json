@@ -17,13 +17,6 @@
     "typescriptreact",
     "vue"
   ],
-  "stylelint.validate": [
-    "vue",
-    "css"
-  ],
-  "window.zoomLevel": 0,
-  // The path to the `bun` executable.
-  "bun.runtime": "~/.bun/bin",
-  // If support for Bun should be added to the default "JavaScript Debug Terminal".
-  "bun.debugTerminal.enabled": true,
+  "stylelint.validate": ["vue", "css"],
+  "window.zoomLevel": 0
 }
