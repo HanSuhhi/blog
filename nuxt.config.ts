@@ -5,7 +5,14 @@ export default defineNuxtConfig({
     Bun.resolveSync("assets/styles/index.css", import.meta.dir)
   ],
   modules: [
-    "@nuxtjs/eslint-module"
+    ["@nuxtjs/eslint-module", {
+      lintOnStart: false,
+      fix: true
+    }],
+    ["@nuxtjs/stylelint-module", {
+      fix: true,
+      lintOnStart: false
+    }]
   ],
   typescript: {
     typeCheck: true
