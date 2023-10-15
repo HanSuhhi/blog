@@ -4,6 +4,11 @@ html {
   --main-color-bright-2: var(--yellow-bright-2);
   --main-color-deep-1: var(--yellow-deep-1);
   --main-color-deep-2: var(--yellow-deep-2);
+  --sub-color: var(--blue);
+  --sub-color-bright-1: var(--blue-bright-1);
+  --sub-color-bright-2: var(--blue-bright-2);
+  --sub-color-deep-1: var(--blue-deep-1);
+  --sub-color-deep-2: var(--blue-deep-2);
   --font-color: var(--black);
   --bg-color-deep-1: rgb(228 228 228);
   --bg-color-deep-2: rgb(199 199 199);

@@ -1,5 +1,9 @@
 @charset "utf-8";
+
 @layer base, utilities, config, page, component;
 
 @import url("./base/") layer(base);
 @import url("./themes/default.css") layer(base);
+@import url("./overrides/") layer(base);
+@import url("./utilities/") layer(utilities);
+@import url("./config.css") layer(config);

@@ -12,11 +12,11 @@
   --green-bright-2: hsl(145deg 60% 62%);
 
   /* red */
-  --red: hsl(3deg 85% 57%);
-  --red-deep-1: hsl(3deg 73% 51%);
-  --red-deep-2: hsl(3deg 82% 45%);
-  --red-bright-1: hsl(3deg 82% 61%);
-  --red-bright-2: hsl(3deg 85% 69%);
+  --red: hsl(353deg 82% 58%);
+  --red-deep-1: hsl(353deg 83% 48%);
+  --red-deep-2: hsl(353deg 72% 50%);
+  --red-bright-1: hsl(353deg 85% 65%);
+  --red-bright-2: hsl(353deg 73% 73%);
 
   /* yellow */
   --yellow: hsl(45deg 86% 58%);
@@ -37,15 +37,15 @@
 
   /* blue  */
   --blue: hsl(196deg 98% 79%);
-  --blue-bright-1: hsl(189deg 87% 82%);
+  --blue-bright-1: hsl(196deg 87% 82%);
   --blue-bright-2: hsl(196deg 76% 87%);
-  --blue-deep-1: hsl(199deg 78% 55%);
-  --blue-deep-2: hsl(195deg 52% 50%);
+  --blue-deep-1: hsl(196deg 78% 55%);
+  --blue-deep-2: hsl(196deg 52% 50%);
 
   /* black */
-  --black: rgb(15 15 15);
-  --black-bright-1: rgb(31 31 31);
-  --black-bright-2: rgb(40 39 39);
+  --black: hsl(0deg 0% 6%);
+  --black-bright-1: hsl(0deg 0% 9%);
+  --black-bright-2: hsl(0deg 0% 12%);
 
   /* gray */
   --gray: hsl(220deg 1% 44%);
