@@ -1,6 +1,7 @@
 body {
-  --border-radius: var(--small);
-  --border-color: var(--gray-deep-2);
-  --border-height: 1px;
-  --border: var(--border-height) solid var(--border-color);
+  --_font-color: var(--white);
+
+  font-family: "Fira Code", sans-serif;
+  font-size: var(--font-body);
+  color: var(--_font-color);
 }

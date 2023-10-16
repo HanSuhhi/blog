@@ -1,7 +1,7 @@
 <template>
   <div class="default-background flex-center">
     <div class="default-background_main">
-      1
+      <slot />
     </div>
   </div>
 </template>
@@ -17,12 +17,16 @@
     background-image: linear-gradient(55deg, var(--_bg-sub-color), var(--_bg-main-color));
 
     .default-background_main {
-      --_bg-mask-size: var(--normal);
+      --_bg-mask-size: var(--base-margin);
       --_bg-color: var(--black-bright-2);
+      --_main-box-padding: var(--base-margin);
+      --_main-box-top: 5rem;
 
       width: stretch;
       height: stretch;
       margin: var(--_bg-mask-size);
+      padding: var(--_main-box-padding);
+      padding-top: var(--_main-box-top);
 
       background-color: var(--_bg-color);
       border-radius: var(--border-radius);

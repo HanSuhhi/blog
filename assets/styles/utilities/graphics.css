@@ -1,0 +1,9 @@
+.diamond {
+  --_diamond-size: 20px;
+  --_bg-color: white;
+
+  transform: rotate(45deg);
+  aspect-ratio: 1;
+  width: var(--_diamond-size);
+  background-color: var(--_bg-color);
+}

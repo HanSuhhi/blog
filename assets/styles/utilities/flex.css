@@ -7,3 +7,9 @@
   align-items: center;
   justify-content: center;
 }
+
+.flex-column-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

@@ -1,3 +1,9 @@
+.pseudo,
+.pseudo-before,
+.pseudo-after {
+  position: relative;
+}
+
 .pseudo::before,
 .pseudo::after,
 .pseudo-after::after,

@@ -9,15 +9,23 @@ export default defineNuxtConfig({
       lintOnStart: false,
       fix: true
     }],
-    ["@nuxtjs/stylelint-module", {
-      fix: true,
-      lintOnStart: false
-    }]
+    // ["@nuxtjs/stylelint-module", {
+    //   fix: true,
+    //   lintOnStart: false
+    // }],
+    "@nuxtjs/google-fonts",
+    "@nuxt/content",
+    "nuxt-lodash"
   ],
   typescript: {
     typeCheck: true
   },
   devServer: {
     port: 51714
+  },
+  googleFonts: {
+    families: {
+      "Fira Code": true
+    }
   }
 });
