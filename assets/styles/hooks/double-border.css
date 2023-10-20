@@ -1,0 +1,30 @@
+/* @.pseudo-after is required */
+
+/* will try to get width/style/color from .outline/.border first  */
+.double-border {
+  &::after {
+    --_db-top: 3px;
+    --_db-left: 4px;
+    --_db-width: 100%;
+    --_db-height: 100%;
+    --_db-border-width: var(--border-width, 1px);
+    --_db-border-style: var(--border-style, solid);
+    --_db-border-color: var(--border-color, gray);
+    --_db-filter-blur: .3px;
+
+    pointer-events: none;
+
+    top: var(--_db-top);
+    left: var(--_db-left);
+
+    width: var(--_db-width);
+    height: var(--_db-height);
+
+    color: red;
+
+    filter: blur(var(--_db-filter-blur));
+    border-color: var(--_db-border-color);
+    border-style: var(--_db-border-style);
+    border-width: var(--_db-border-width);
+  }
+}

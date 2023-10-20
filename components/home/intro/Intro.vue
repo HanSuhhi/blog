@@ -15,8 +15,8 @@
     flex: 1;
 
     .home-intro_ls {
-      overflow-y: auto;
       overflow-x: clip;
+      overflow-y: auto;
     }
   }
 }

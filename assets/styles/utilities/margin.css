@@ -1,3 +1,48 @@
+.m {
+  --_m-size: var(--normal, 16px);
+
+  margin: var(--_m-size);
+}
+
+.mt {
+  --_mt-size: var(--normal, 16px);
+
+  margin-top: var(--_mt-size);
+}
+
+.mr {
+  --_mr-size: var(--normal, 16px);
+
+  margin-right: var(--_mr-size);
+}
+
+.mb {
+  --_mb-size: var(--normal, 16px);
+
+  margin-bottom: var(--_mb-size);
+}
+
+.ml {
+  --ml-size: var(--normal, 16px);
+
+  margin-left: var(--ml-size);
+}
+
+.mx {
+  --mx-size: var(--normal, 16px);
+
+  margin-right: var(--mx-size);
+  margin-left: var(--mx-size);
+}
+
+.my {
+  --my-size: var(--normal, 16px);
+
+  margin-top: var(--my-size);
+  margin-bottom: var(--my-size);
+}
+
+
 .m-mini {
   margin: var(--mini);
 }

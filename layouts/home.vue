@@ -7,7 +7,7 @@
 </template>
 
 <style scoped>
-@layer page {
+@layer layout {
   .layout-home {
     display: flex;
     height: inherit;

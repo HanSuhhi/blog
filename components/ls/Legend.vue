@@ -14,9 +14,9 @@
   .ls-legend {
     --_margin-left: calc(2 * var(--large));
 
+    flex: 1;
     justify-content: flex-start;
     margin-left: var(--_margin-left);
-    flex: 1;
 
     .ls-legend_block {
       --_color: var(--main-color);
@@ -24,7 +24,7 @@
       .ls-legend_theme {
         --_width: 20px;
         --_height: 8px;
-        --_border-color: hsla(0, 0%, 100%, 0.9);
+        --_border-color: hsl(0deg 0% 100% / 90%);
 
         width: var(--_width);
         height: var(--_height);
@@ -34,6 +34,7 @@
         &[data-type="learning"] {
           --_color: var(--_learning-theme);
         }
+
         &[data-type="rusty"] {
           --_color: var(--_rusty-theme);
         }

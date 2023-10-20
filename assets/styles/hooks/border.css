@@ -1,0 +1,9 @@
+.border {
+  --_border-width: var(--border-width);
+  --_border-style: solid;
+  --_border-color: var(--border-color, gray);
+
+  border-color: var(--_border-color);
+  border-style: var(--_border-style);
+  border-width: var(--_border-width);
+}

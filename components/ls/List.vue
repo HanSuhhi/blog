@@ -42,7 +42,6 @@ const one_chunk_max_length = 10;
     --_item-height: var(--_line-height);
 
     display: flex;
-
     flex-flow: column wrap;
     flex-direction: column;
     align-items: flex-start;
@@ -53,13 +52,17 @@ const one_chunk_max_length = 10;
     white-space: nowrap;
 
     .li-list_item {
+      --_item-color: inherit;
+
       line-height: var(--_item-height);
+      color: var(--_item-color);
 
       &[data-type="learning"] {
-        color: var(--_learning-theme);
+        --_item-color: var(--_learning-theme);
       }
+
       &[data-type="rusty"] {
-        color: var(--_rusty-theme);
+        --_item-color: var(--_rusty-theme);
       }
     }
 

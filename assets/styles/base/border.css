@@ -1,6 +1,7 @@
 :root {
     --border-radius: var(--small);
     --border-color: var(--gray-deep-2);
-    --border-height: 1px;
-    --border: var(--border-height) solid var(--border-color);
+    --border-style: solid;
+    --border-width: 1px;
+    --border: var(--border-width) var(--border-style) var(--border-color);
 }

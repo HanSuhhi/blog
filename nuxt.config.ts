@@ -15,8 +15,17 @@ export default defineNuxtConfig({
     // }],
     "@nuxtjs/google-fonts",
     "@nuxt/content",
-    "nuxt-lodash"
+    "nuxt-lodash",
+    "nuxt-icon",
+    "dayjs-nuxt"
   ],
+  vite: {
+    vue: {
+      script: {
+        propsDestructure: true
+      }
+    }
+  },
   typescript: {
     typeCheck: true
   },

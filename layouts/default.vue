@@ -1,13 +1,14 @@
 <template>
   <div class="default-background flex-center">
     <div class="default-background_main">
+      <BackgroundNoise />
       <slot />
     </div>
   </div>
 </template>
 
 <style scoped>
-@layer page {
+@layer layout {
   .default-background {
     --_bg-main-color: var(--main-color-deep-1);
     --_bg-sub-color: var(--main-color-bright-1);
@@ -27,6 +28,7 @@
       margin: var(--_bg-mask-size);
       padding: var(--_main-box-padding);
       padding-top: var(--_main-box-top);
+      padding-left: 0;
 
       background-color: var(--_bg-color);
       border-radius: var(--border-radius);

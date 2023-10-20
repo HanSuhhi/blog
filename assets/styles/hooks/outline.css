@@ -1,0 +1,7 @@
+.outline {
+  --_outline-width: var(--border-width);
+  --_outline-style: solid;
+  --_outline-color: var(--border-color, gray);
+
+  outline: var(--_outline-color) var(--_outline-style) var(--_outline-width);
+}

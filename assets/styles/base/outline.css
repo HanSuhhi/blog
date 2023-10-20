@@ -1,0 +1,6 @@
+:root {
+    --outline-color: var(--gray-deep-2);
+    --outline-style: solid;
+    --outline-width: 1px;
+    --outline: var(--outline-width) solid var(--outline-color);
+}

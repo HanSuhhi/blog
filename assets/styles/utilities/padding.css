@@ -1,0 +1,123 @@
+.p-mini {
+  padding: var(--mini);
+}
+
+.p-small {
+  padding: var(--small);
+}
+
+.p-bm {
+  padding: var(--base-margin);
+}
+
+.p-large {
+  padding: var(--large);
+}
+
+.pt-mini {
+  padding-top: var(--mini);
+}
+
+.pt-small {
+  padding-top: var(--small);
+}
+
+.pt-bm {
+  padding-top: var(--base-margin);
+}
+
+.pt-large {
+  padding-top: var(--large);
+}
+
+
+.pr-mini {
+  padding-right: var(--mini);
+}
+
+.pr-small {
+  padding-right: var(--small);
+}
+
+.pr-bm {
+  padding-right: var(--base-margin);
+}
+
+.pr-large {
+  padding-right: var(--large);
+}
+
+
+.pb-mini {
+  padding-bottom: var(--mini);
+}
+
+.pb-small {
+  padding-bottom: var(--small);
+}
+
+.pb-bm {
+  padding-bottom: var(--base-margin);
+}
+
+.pb-large {
+  padding-bottom: var(--large);
+}
+
+.pl-mini {
+  padding-left: var(--mini);
+}
+
+.pl-small {
+  padding-left: var(--small);
+}
+
+.pl-bm {
+  padding-left: var(--base-margin);
+}
+
+.pl-large {
+  padding-left: var(--large);
+}
+
+
+.px-mini {
+  padding-right: var(--mini);
+  padding-left: var(--mini);
+}
+
+.px-small {
+  padding-right: var(--small);
+  padding-left: var(--small);
+}
+
+.px-bm {
+  padding-right: var(--base-margin);
+  padding-left: var(--base-margin);
+}
+
+.px-large {
+  padding-right: var(--large);
+  padding-left: var(--large);
+}
+
+
+.py-mini {
+  padding-top: var(--mini);
+  padding-bottom: var(--mini);
+}
+
+.py-small {
+  padding-top: var(--small);
+  padding-bottom: var(--small);
+}
+
+.py-bm {
+  padding-top: var(--base-margin);
+  padding-bottom: var(--base-margin);
+}
+
+.py-large {
+  padding-top: var(--large);
+  padding-bottom: var(--large);
+}

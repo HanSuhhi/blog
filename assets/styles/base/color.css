@@ -54,6 +54,7 @@
   --gray-deep-3: rgb(125 125 125);
   --gray-bright-1: hsl(225deg 3% 47%);
   --gray-bright-2: hsl(240deg 2% 66%);
+  --gray-bright-3: hsl(240deg 2% 74%);
 
   /* orange */
   --orange: hsl(26deg 95% 59%);

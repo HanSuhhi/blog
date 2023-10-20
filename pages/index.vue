@@ -2,21 +2,30 @@
 </script>
 
 <template>
-  <NuxtLayout name="home" class="home">
+  <nuxt-layout name="home" class="home">
     <template #links>
-      <HomeLinks />
+      <home-links class="home-links mb-bm" />
     </template>
-    <HomeIntro />
     <template #posts>
-      <HomePosts />
+      <HomePosts class="home-posts" />
     </template>
-  </NuxtLayout>
+    <HomeIntro class="home-intro" />
+    <the-line class="home-line" />
+    <copyright-label class="home-copyright" />
+  </nuxt-layout>
 </template>
 
 <style scoped>
-@layer page {
-  .home > * {
+@layer layout {
+  .home-links,
+  .home-posts,
+  .home-intro {
     height: inherit;
+  }
+
+  .home-line {
+    position: absolute;
+    inset: 0;
   }
 }
 </style>

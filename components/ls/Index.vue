@@ -35,8 +35,8 @@ const { showingCapabilities } = await useCapability();
     }
 
     .ls-total {
-      line-height: var(--_line-height);
       font-size: var(--_font-size);
+      line-height: var(--_line-height);
     }
   }
 }
