@@ -1,4 +1,5 @@
-body {
+:root {
   --transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  --transition-duration: .45s;
   --transition-prop: var(--transition-duration) var(--transition-timing-function)
 }

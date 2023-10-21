@@ -1,6 +1,7 @@
 body {
   --_font-color: var(--white);
 
+  margin: 0;
   font-family: "Fira Code", sans-serif;
   font-size: var(--font-body);
   color: var(--_font-color);

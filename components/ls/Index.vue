@@ -5,19 +5,21 @@ const { showingCapabilities } = await useCapability();
 <template>
   <div class="ls">
     <template v-for="{ capability_name, capabilities } of showingCapabilities" :key="capability_name">
-      <div class="ls-title flex-center mt-bm">
-        <p class="p-reset ls-title_txt">
-          >  ls ~/capabilities/{{ capability_name }} -alR
+      <div class="ls-body mb-large">
+        <div class="ls-title flex-center mt-bm">
+          <p class="p-reset ls-title_txt">
+            >  ls ~/capabilities/{{ capability_name }} -alR
+          </p>
+          <ls-legend />
+        </div>
+        <p class="p-reset ls-total mt-bm">
+          total {{ capabilities.length }}
+          <span class="ml-small">
+            ʕ•̫͡•ོʔ
+          </span>
         </p>
-        <ls-legend />
+        <ls-list :capabilities="capabilities" class="mb-bm" />
       </div>
-      <p class="p-reset ls-total mt-bm">
-        total {{ capabilities.length }}
-        <span class="ml-small">
-          ʕ•̫͡•ོʔ
-        </span>
-      </p>
-      <ls-list :capabilities="capabilities" class="mb-bm" />
     </template>
   </div>
 </template>

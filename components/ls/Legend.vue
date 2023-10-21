@@ -1,5 +1,5 @@
 <template>
-  <ul class="ls-legend ul-reset flex-center">
+  <ul class="ls-legend ul-reset flex-row-start">
     <template v-for="legend_name, index of useCapabilityTheme()" :key="index">
       <li class="ls-legend_block flex-center mr-bm">
         <div :data-type="legend_name" class="ls-legend_theme mr-small pseudo-after" />

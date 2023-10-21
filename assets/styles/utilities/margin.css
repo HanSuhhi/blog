@@ -52,7 +52,7 @@
 }
 
 .m-bm {
-  margin: var(--base-margin);
+  margin: var(--base-space);
 }
 
 .m-large {
@@ -68,7 +68,7 @@
 }
 
 .mt-bm {
-  margin-top: var(--base-margin);
+  margin-top: var(--base-space);
 }
 
 .mt-large {
@@ -85,7 +85,7 @@
 }
 
 .mr-bm {
-  margin-right: var(--base-margin);
+  margin-right: var(--base-space);
 }
 
 .mr-large {
@@ -102,7 +102,7 @@
 }
 
 .mb-bm {
-  margin-bottom: var(--base-margin);
+  margin-bottom: var(--base-space);
 }
 
 .mb-large {
@@ -118,7 +118,7 @@
 }
 
 .ml-bm {
-  margin-left: var(--base-margin);
+  margin-left: var(--base-space);
 }
 
 .ml-large {
@@ -137,8 +137,8 @@
 }
 
 .mx-bm {
-  margin-right: var(--base-margin);
-  margin-left: var(--base-margin);
+  margin-right: var(--base-space);
+  margin-left: var(--base-space);
 }
 
 .mx-large {
@@ -158,8 +158,8 @@
 }
 
 .my-bm {
-  margin-top: var(--base-margin);
-  margin-bottom: var(--base-margin);
+  margin-top: var(--base-space);
+  margin-bottom: var(--base-space);
 }
 
 .my-large {

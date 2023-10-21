@@ -1,18 +1,24 @@
+<script lang="ts" setup>
+const icons = [
+  "uil:github",
+  "fa6-brands:bilibili"
+];
+</script>
+
 <template>
-  <section class="home-links flex-column-center">
-    <home-links-icon name="uil:github" color="black" />
-  </section>
+  <template v-for="icon of icons " :key="icon">
+    <Icon class="link-icon mt-bm" :name="icon" />
+  </template>
 </template>
 
 <style scoped>
 @layer page {
-  .home-links {
-    --_width: 5%;
-    --_min-width: 40px;
+  .link-icon {
+    --_size: 40px;
+    --_color: var(--white, white);
 
-    justify-content: flex-end;
-    width: var(--_width);
-    min-width: var(--_min-width);
+    font-size: var(--_size);
+    color: var(--_color);
   }
 }
 </style>

@@ -42,8 +42,8 @@ const { post } = defineProps<{ post: Pick<ParsedContent, string> }>();
     .post-date {
       --_size: var(--font-body-small, 14px);
 
-      font-size: var(--_size);
       font-weight: bold;
+      font-size: var(--_size);
       color: var(--_color);
     }
 
@@ -54,7 +54,6 @@ const { post } = defineProps<{ post: Pick<ParsedContent, string> }>();
       font-size: var(--_size);
       color: var(--_color);
     }
-
     .post-description {
       --_max-length: 5;
       --_color: var(--gray-bright-3, gray);
@@ -75,23 +74,21 @@ const { post } = defineProps<{ post: Pick<ParsedContent, string> }>();
         font-size: var(--_size);
         font-weight: bold;
       }
-
       .post-predict {
         --_size: var(--font-body-small, 12px);
 
         font-size: var(--_size);
       }
     }
-
     .post-line {
-      transform: rotateY(180deg);
       width: 100%;
+      transform: rotateY(180deg);
 
       &::after {
-        transform: rotate(-3deg) translateY(20px);
         width: 70%;
         height: 1px;
         background-color: var(--main-color-bright-2);
+        transform: rotate(-3deg) translateY(20px);
       }
     }
   }

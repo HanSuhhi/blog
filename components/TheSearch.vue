@@ -19,7 +19,7 @@ const placeholder = useSample(placeholders);
     --_width: 80%;
     --_height: 36px;
     --_padding-y: var(--mini, 4px);
-    --_padding-x: var(--base-margin, 16px);
+    --_padding-x: var(--base-space, 16px);
     --_color: var(--white, white);
 
     width: var(--_width);

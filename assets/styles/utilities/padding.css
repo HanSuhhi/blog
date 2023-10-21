@@ -7,7 +7,7 @@
 }
 
 .p-bm {
-  padding: var(--base-margin);
+  padding: var(--base-space);
 }
 
 .p-large {
@@ -23,7 +23,7 @@
 }
 
 .pt-bm {
-  padding-top: var(--base-margin);
+  padding-top: var(--base-space);
 }
 
 .pt-large {
@@ -40,7 +40,7 @@
 }
 
 .pr-bm {
-  padding-right: var(--base-margin);
+  padding-right: var(--base-space);
 }
 
 .pr-large {
@@ -57,7 +57,7 @@
 }
 
 .pb-bm {
-  padding-bottom: var(--base-margin);
+  padding-bottom: var(--base-space);
 }
 
 .pb-large {
@@ -73,7 +73,7 @@
 }
 
 .pl-bm {
-  padding-left: var(--base-margin);
+  padding-left: var(--base-space);
 }
 
 .pl-large {
@@ -92,8 +92,8 @@
 }
 
 .px-bm {
-  padding-right: var(--base-margin);
-  padding-left: var(--base-margin);
+  padding-right: var(--base-space);
+  padding-left: var(--base-space);
 }
 
 .px-large {
@@ -113,8 +113,8 @@
 }
 
 .py-bm {
-  padding-top: var(--base-margin);
-  padding-bottom: var(--base-margin);
+  padding-top: var(--base-space);
+  padding-bottom: var(--base-space);
 }
 
 .py-large {

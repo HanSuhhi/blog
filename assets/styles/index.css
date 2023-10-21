@@ -4,7 +4,6 @@
 
 @import url("./base/") layer(base);
 @import url("./themes/default.css") layer(base);
-@import url("./overrides/") layer(base);
 @import url("./reset/") layer(base);
 @import url("./utilities/") layer(utilities);
 @import url("./hooks/") layer(utilities);
