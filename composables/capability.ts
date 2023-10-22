@@ -1,5 +1,5 @@
 export async function useCapability() {
-  const data = await queryContent<{ body: [name: string, capablities: Array<LiItem>] }>("/capabilities").findOne();
+  const data = await queryContent<{ body: [name: string, capablities: Array<CapabilityList>] }>("/capabilities").findOne();
 
   const showingCapabilities = computed(() => {
     return data.body.map(([capability_name, ...capablities]) => {
@@ -18,7 +18,7 @@ export async function useCapability() {
             hour,
             minute,
             type
-          ] as DisplayLiItem;
+          ] as DisplayCapabilityList;
         })
       };
     });

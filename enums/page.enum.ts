@@ -1,5 +1,6 @@
 export enum PageEnum {
-  Resume = "~/resume",
-  Todo = "~/todos",
-  Articles = "~/articles"
+  Root = "~",
+  Capabilitys = "capabilities",
+  Todo = "todos",
+  Posts = "posts"
 }

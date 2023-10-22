@@ -1,6 +1,4 @@
-type LiItemControl = "r" | "w" | "x"
-
-type LiItem = [
+type CapabilityList = [
   name: string,
   /**
    * @description "-" - file "d" - directory "l" - "symlink"
@@ -14,7 +12,7 @@ type LiItem = [
   status?: "learning" | "rusty"
 ]
 
-type DisplayLiItem = [
+type DisplayCapabilityList = [
   name: stirng,
   file_system: string,
   children_length: number,
@@ -22,5 +20,5 @@ type DisplayLiItem = [
   day: number,
   hour: number,
   minute: number,
-  type?: LiItem['7']
+  type?: CapabilityList['7']
 ]

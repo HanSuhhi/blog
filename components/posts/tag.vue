@@ -5,7 +5,7 @@ const { tag = "div" } = defineProps<{
 </script>
 
 <template>
-  <component :is="tag" class="post-tag mr-small px-bm border">
+  <component :is="tag" class="post-tag mr-small px-bs border">
     <slot />
   </component>
 </template>
@@ -17,6 +17,7 @@ const { tag = "div" } = defineProps<{
     --_border-color: var(--_color, white);
 
     color: var(--_color);
+    filter: brightness(.7);
 
     &::after {
       --_db-outline-width: .5px;

@@ -5,14 +5,14 @@ const { post } = defineProps<{ post: Pick<ParsedContent, string> }>();
 </script>
 
 <template>
-  <section class="post">
-    <header class=" post-date">
-      {{ useDayjs()(post.created).format("YYYY/MM/DD HH:MM") }}
+  <section class="post flex-column-start p-bs">
+    <header class="post-date">
+      {{ post.created }}
     </header>
     <h3 class="h-reset post-title mt-mini">
       {{ post.title }}
     </h3>
-    <p class="p-reset text-ellipsis post-description mt-small ">
+    <p class="p-reset text-ellipsis post-description mt-small mb-mini ">
       {{ post.description }}
     </p>
     <footer class="post-footer flex-row-between">
@@ -29,7 +29,6 @@ const { post } = defineProps<{ post: Pick<ParsedContent, string> }>();
         分钟
       </p>
     </footer>
-    <div class="post-line pseudo-after" />
   </section>
 </template>
 
@@ -38,12 +37,15 @@ const { post } = defineProps<{ post: Pick<ParsedContent, string> }>();
   .post {
     --_size: var(--font-body, 18px);
     --_color: var(--main-color-bright-1, yellow);
+    --_bg-color: hsl(0deg 0% 100% / 10%);
+
+    border-bottom: 1px dotted var(--border-color);
 
     .post-date {
       --_size: var(--font-body-small, 14px);
 
-      font-weight: bold;
       font-size: var(--_size);
+      font-weight: bold;
       color: var(--_color);
     }
 
@@ -54,11 +56,13 @@ const { post } = defineProps<{ post: Pick<ParsedContent, string> }>();
       font-size: var(--_size);
       color: var(--_color);
     }
+
     .post-description {
       --_max-length: 5;
       --_color: var(--gray-bright-3, gray);
       --_size: var(--font-body, 24px);
 
+      flex: 1;
       font-size: var(--_size);
       color: var(--_color);
     }
@@ -74,21 +78,11 @@ const { post } = defineProps<{ post: Pick<ParsedContent, string> }>();
         font-size: var(--_size);
         font-weight: bold;
       }
+
       .post-predict {
         --_size: var(--font-body-small, 12px);
 
         font-size: var(--_size);
-      }
-    }
-    .post-line {
-      width: 100%;
-      transform: rotateY(180deg);
-
-      &::after {
-        width: 70%;
-        height: 1px;
-        background-color: var(--main-color-bright-2);
-        transform: rotate(-3deg) translateY(20px);
       }
     }
   }

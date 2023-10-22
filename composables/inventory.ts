@@ -1,5 +1,5 @@
-export async function useInventory() {
-  const data = await queryContent<{ body: InventoryPart }>("/inventory").findOne();
+export async function useTodo() {
+  const data = await queryContent<{ body: TodoPart }>("/todo").findOne();
 
   return { data };
 }

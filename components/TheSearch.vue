@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 const placeholders = [
-  "今天天气不错 ☁️"
+  "今天天气不错 ☁️",
+  "嘿，你好吗？",
+  "一起去散步吗？🚶‍♀️🚶‍♂️",
+  "今天有没有遇到什么有趣的人或事情？😄"
 ];
 
 const placeholder = useSample(placeholders);

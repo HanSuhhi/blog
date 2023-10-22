@@ -2,7 +2,7 @@ body {
   --_font-color: var(--white);
 
   margin: 0;
-  font-family: "Fira Code", sans-serif;
+  font-family:  "Fira Code", "Source Code Pro", monospace, fantasy;
   font-size: var(--font-body);
   color: var(--_font-color);
 }

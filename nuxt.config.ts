@@ -10,14 +10,12 @@ export default defineNuxtConfig({
       fix: true
     }],
     // ["@nuxtjs/stylelint-module", {
-    //   fix: true,
-    //   lintOnStart: false
+    //   fix: true
     // }],
     "@nuxtjs/google-fonts",
     "@nuxt/content",
     "nuxt-lodash",
-    "nuxt-icon",
-    "dayjs-nuxt"
+    "nuxt-icon"
   ],
   vite: {
     vue: {
@@ -34,7 +32,8 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      "Fira Code": true
+      "Fira Code": true,
+      "Source Code Pro": true
     }
   }
 });

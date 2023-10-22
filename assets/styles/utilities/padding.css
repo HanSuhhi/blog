@@ -6,7 +6,7 @@
   padding: var(--small);
 }
 
-.p-bm {
+.p-bs {
   padding: var(--base-space);
 }
 
@@ -22,7 +22,7 @@
   padding-top: var(--small);
 }
 
-.pt-bm {
+.pt-bs {
   padding-top: var(--base-space);
 }
 
@@ -39,7 +39,7 @@
   padding-right: var(--small);
 }
 
-.pr-bm {
+.pr-bs {
   padding-right: var(--base-space);
 }
 
@@ -56,7 +56,7 @@
   padding-bottom: var(--small);
 }
 
-.pb-bm {
+.pb-bs {
   padding-bottom: var(--base-space);
 }
 
@@ -72,7 +72,7 @@
   padding-left: var(--small);
 }
 
-.pl-bm {
+.pl-bs {
   padding-left: var(--base-space);
 }
 
@@ -91,7 +91,7 @@
   padding-left: var(--small);
 }
 
-.px-bm {
+.px-bs {
   padding-right: var(--base-space);
   padding-left: var(--base-space);
 }
@@ -112,7 +112,7 @@
   padding-bottom: var(--small);
 }
 
-.py-bm {
+.py-bs {
   padding-top: var(--base-space);
   padding-bottom: var(--base-space);
 }

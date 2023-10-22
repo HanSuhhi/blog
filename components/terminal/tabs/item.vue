@@ -5,9 +5,9 @@ const { current } = defineProps<{
 </script>
 
 <template>
-  <section :data-current="current" class="tabs-item flex-center p-mini">
+  <nuxt-link :data-current="current" class="tabs-item flex-center p-mini">
     <slot />
-  </section>
+  </nuxt-link>
 </template>
 
 <style scoped>

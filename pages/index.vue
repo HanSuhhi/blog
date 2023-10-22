@@ -6,22 +6,25 @@ const { routes, currentRoute } = useTerminalRoutes();
   <nuxt-layout name="terminal">
     <template #tabs>
       <template v-for="route, index of routes" :key="route">
-        <tabs-item :current="currentRoute === index" @click="currentRoute = index">
-          {{ route }}
-        </tabs-item>
+        <terminal-tabs-item tabs-item :current="currentRoute === index" :to="getCurrentPath(route)" @click="currentRoute = index">
+          ~{{ getCurrentPath(route) }}
+        </terminal-tabs-item>
       </template>
+      <terminal-tabs-item class="terminal—add">
+        +
+      </terminal-tabs-item>
     </template>
-    <!-- <HomeIntro class="home-intro" />
-    <the-line class="home-line" />
-    <copyright-label class="home-copyright" /> -->
+    <nuxt-page />
+    <copyright />
   </nuxt-layout>
 </template>
 
 <style scoped>
 @layer layout {
-  .home-line {
-    position: absolute;
-    inset: 0;
+  .terminal—add {
+    --_width: 60px;
+
+    width: var(--_width);
   }
 }
 </style>

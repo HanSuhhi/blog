@@ -1,9 +1,9 @@
 <template>
-  <ul class="ls-legend ul-reset flex-row-start">
+  <ul class="resume-legend ul-reset flex-row-start">
     <template v-for="legend_name, index of useCapabilityTheme()" :key="index">
-      <li class="ls-legend_block flex-center mr-bm">
-        <div :data-type="legend_name" class="ls-legend_theme mr-small pseudo-after" />
-        <span class="ls-legend_text">{{ legend_name }}</span>
+      <li class="resume-legend_block flex-center mr-bs">
+        <div :data-type="legend_name" class="resume-legend_theme mr-small pseudo-after" />
+        <span class="resume-legend_text">{{ legend_name }}</span>
       </li>
     </template>
   </ul>
@@ -11,17 +11,17 @@
 
 <style scoped>
 @layer comp {
-  .ls-legend {
+  .resume-legend {
     --_margin-left: calc(2 * var(--large));
 
     flex: 1;
     justify-content: flex-start;
     margin-left: var(--_margin-left);
 
-    .ls-legend_block {
+    .resume-legend_block {
       --_color: var(--main-color);
 
-      .ls-legend_theme {
+      .resume-legend_theme {
         --_width: 20px;
         --_height: 8px;
         --_border-color: hsl(0deg 0% 100% / 90%);
