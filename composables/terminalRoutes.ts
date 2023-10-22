@@ -1,4 +1,9 @@
-import { PageEnum } from "~/enums/page.enum";
+enum PageEnum {
+  Root = "~",
+  Capabilitys = "capabilities",
+  Todo = "todos",
+  Posts = "posts"
+}
 
 export function useTerminalRoutes() {
   const routes = ref<PageEnum[]>([
@@ -8,12 +13,6 @@ export function useTerminalRoutes() {
     PageEnum.Posts
   ]);
   const currentRoute = useState("terminal-current-route", () => 0);
-  const { pathname } = useRequestURL();
-
-  onMounted(() => {
-    const index = useFindIndex(routes.value, (item: string) => `/${item}` === pathname);
-    currentRoute.value = index === -1 ? 0 : index;
-  });
 
   return {
     routes,

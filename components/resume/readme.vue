@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const a = import.meta.versions;
-
 const helps = [
   ["Hey there! 👋 You look great! ", "mt-small"],
   ["Welcome to my blog, which is a simple imitation of the Linux system."],
@@ -13,7 +11,7 @@ const helps = [
 
 <template>
   <terminal-output tag="h1" class="readme h-reset">
-    小右 Don / Filine {{ a }}
+    小右 Don / Filine
     <img class="readme_badge absolute" src="~/assets/images/badge.png" alt="" srcset="">
   </terminal-output>
   <template v-for="[help, classes], index of helps" :key="index">

@@ -2,8 +2,15 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
-    Bun.resolveSync("assets/styles/index.css", import.meta.dir)
+    "@/assets/styles/index.css"
   ],
+  app: {
+    head: {
+      style: [
+        { innerHTML: "@layer base, utilities, config, comp, layout, page;" }
+      ]
+    }
+  },
   modules: [
     ["@nuxtjs/eslint-module", {
       lintOnStart: false,

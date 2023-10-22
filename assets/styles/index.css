@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-@layer base, utilities, config, comp, layout, page;
-
 @import url("./base/") layer(base);
 @import url("./themes/default.css") layer(base);
 @import url("./reset/") layer(base);

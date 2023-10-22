@@ -1,5 +1,11 @@
 <script setup lang="ts">
+const { pathname } = useRequestURL();
 const { routes, currentRoute } = useTerminalRoutes();
+
+onMounted(() => {
+  const index = useFindIndex(routes.value, (item: string) => `/${item}` === pathname);
+  currentRoute.value = index === -1 ? 0 : index;
+});
 </script>
 
 <template>
