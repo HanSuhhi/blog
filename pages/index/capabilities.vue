@@ -9,7 +9,7 @@ const { showingCapabilities } = await useCapability();
         ls ./capabilities/{{ capability_name }}
       </template>
       <template #output>
-        <resume-capability :capabilities="capabilities" />
+        <capability :capabilities="capabilities" />
       </template>
     </nuxt-layout>
   </template>
