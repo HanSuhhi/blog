@@ -5,8 +5,9 @@ const { current } = defineProps<{
 </script>
 
 <template>
-  <nuxt-link :data-current="current" class="tabs-item flex-center p-mini">
+  <nuxt-link :data-current="current" class="tabs-item flex-center p-mini relative">
     <slot />
+    <span class="tabs-item_close">×</span>
   </nuxt-link>
 </template>
 
@@ -44,11 +45,29 @@ const { current } = defineProps<{
       --_brightness: 1.5;
 
       cursor: pointer;
+
+      .tabs-item_close {
+        opacity: 1;
+      }
     }
 
     &[data-current = "true"] {
       --_brightness: 2;
+    }
 
+    .tabs-item_close {
+      position: absolute;
+      right: var(--small);
+
+      font-size: var(--font-title);
+
+      opacity: 0;
+
+      transition: var(--transition-prop);
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }

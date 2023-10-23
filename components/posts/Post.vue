@@ -39,8 +39,8 @@ const { post } = defineProps<{ post: Pick<ParsedContent, string> }>();
     --_color: var(--main-color-bright-1, yellow);
     --_bg-color: hsl(0deg 0% 100% / 10%);
 
-    border-bottom: 1px dotted var(--border-color);
     height: fit-content;
+    border-bottom: 1px dotted var(--border-color);
 
     .post-date {
       --_size: var(--font-body-small, 14px);
