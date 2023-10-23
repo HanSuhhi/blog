@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     "@/assets/styles/index.css"
   ],
   app: {
+    baseURL: "/don-blog/",
     head: {
       style: [
         { innerHTML: "@layer base, utilities, config, comp, layout, page;" }
