@@ -5,14 +5,14 @@ export default defineNuxtConfig({
     "@/assets/styles/index.css"
   ],
   app: {
-    baseURL: "/blog/",
+    // baseURL: "/blog/",
     head: {
       style: [
         { innerHTML: "@layer base, utilities, config, comp, layout, page;" }
-      ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/blog/favicon.ico' }
       ]
+      // link: [
+      //   { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+      // ]
     }
   },
   modules: [
