@@ -16,7 +16,9 @@
     "lint:fix": "eslint . --fix",
     "generate": "NODE_ENV=production nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "generate:github": "DEPLOY_ENV=github NODE_ENV=production nuxt generate",
+    "generate:vercel": "DEPLOY_ENV=vercel NODE_ENV=production nuxt generate"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.4",

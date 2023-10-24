@@ -1,18 +1,29 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+function base_url() {
+  const env = process.env.DEPLOY_ENV;
+  switch (env) {
+    case "github":
+      return "/blog/";
+    case "vercel":
+    default:
+      return "/";
+  }
+}
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
     "@/assets/styles/index.css"
   ],
   app: {
-    // baseURL: "/blog/",
+    baseURL: base_url(),
     head: {
       style: [
         { innerHTML: "@layer base, utilities, config, comp, layout, page;" }
+      ],
+      link: [
+        { rel: "icon", type: "image/x-icon", href: `${base_url()}favicon.ico` }
       ]
-      // link: [
-      //   { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
-      // ]
     }
   },
   modules: [

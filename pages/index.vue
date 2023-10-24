@@ -12,8 +12,10 @@ onMounted(() => {
   <nuxt-layout name="terminal">
     <template #tabs>
       <template v-for="route, index of routes" :key="route">
-        <terminal-tabs-item tabs-item :current="currentRoute === index" :to="getCurrentPath(route)"
-          @click="currentRoute = index">
+        <terminal-tabs-item
+          tabs-item :current="currentRoute === index" :to="getCurrentPath(route)"
+          @click="currentRoute = index"
+        >
           ~{{ getCurrentPath(route) }}
         </terminal-tabs-item>
       </template>
