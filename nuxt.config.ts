@@ -9,6 +9,9 @@ export default defineNuxtConfig({
     head: {
       style: [
         { innerHTML: "@layer base, utilities, config, comp, layout, page;" }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
     }
   },
