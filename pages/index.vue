@@ -3,7 +3,7 @@ const { pathname } = useRequestURL();
 const { routes, currentRoute } = useTerminalRoutes();
 
 onMounted(() => {
-  const index = useFindIndex(routes.value, (item: string) => `/${item}` === pathname);
+  const index = useFindIndex(routes.value, (item: string) => pathname.includes(`/${item}`));
   currentRoute.value = index === -1 ? 0 : index;
 });
 </script>
@@ -12,7 +12,8 @@ onMounted(() => {
   <nuxt-layout name="terminal">
     <template #tabs>
       <template v-for="route, index of routes" :key="route">
-        <terminal-tabs-item tabs-item :current="currentRoute === index" :to="getCurrentPath(route)" @click="currentRoute = index">
+        <terminal-tabs-item tabs-item :current="currentRoute === index" :to="getCurrentPath(route)"
+          @click="currentRoute = index">
           ~{{ getCurrentPath(route) }}
         </terminal-tabs-item>
       </template>

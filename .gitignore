@@ -25,3 +25,4 @@ logs
 
 # cache
 .stylelintcache
+pnpm-lock.yaml
