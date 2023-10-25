@@ -15,8 +15,3 @@ const { data: { body: todo_data } } = await useTodo();
   </template>
   <nuxt-layout name="system" />
 </template>
-
-<style scoped>
-@layer page {
-}
-</style>

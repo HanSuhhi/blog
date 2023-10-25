@@ -1,4 +1,4 @@
 export function getCurrentPath(route: string) {
-  if (route.includes("~")) return "/";
+  if (!route) return "/";
   return `/${route}`;
 }

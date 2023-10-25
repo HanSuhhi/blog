@@ -3,7 +3,10 @@ const { pathname } = useRequestURL();
 const { routes, currentRoute } = useTerminalRoutes();
 
 onMounted(() => {
-  const index = useFindIndex(routes.value, (item: string) => pathname.includes(`/${item}`));
+  const index = routes.value.findIndex((item) => {
+    if (!item) return pathname === "/";
+    return pathname.includes(`/${item}`);
+  });
   currentRoute.value = index === -1 ? 0 : index;
 });
 </script>
@@ -13,13 +16,14 @@ onMounted(() => {
     <template #tabs>
       <template v-for="route, index of routes" :key="route">
         <terminal-tabs-item
-          tabs-item :current="currentRoute === index" :to="getCurrentPath(route)"
+          :current="currentRoute === index"
+          :index="index"
           @click="currentRoute = index"
         >
           ~{{ getCurrentPath(route) }}
         </terminal-tabs-item>
       </template>
-      <terminal-tabs-item class="terminal—add">
+      <terminal-tabs-item class="terminal-tabs_add">
         +
       </terminal-tabs-item>
     </template>
@@ -30,7 +34,7 @@ onMounted(() => {
 
 <style scoped>
 @layer layout {
-  .terminal—add {
+  .terminal-tabs_add {
     --_width: 60px;
 
     width: var(--_width);

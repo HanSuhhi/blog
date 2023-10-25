@@ -1,9 +1,9 @@
 <template>
   <div class="layout-terminal flex-column-start ">
-    <article class="layout-terminal_tabs flex-row-between relative">
+    <nav class="layout-terminal_tabs flex-row-between relative">
       <slot name="tabs" />
       <links />
-    </article>
+    </nav>
     <article class="layout-terminal_default mx-bs ">
       <slot />
     </article>

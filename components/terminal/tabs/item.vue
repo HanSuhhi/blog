@@ -1,14 +1,17 @@
 <script setup lang="ts">
-const { current } = defineProps<{
+const { current, index } = defineProps<{
   current?: boolean
+  index?: number
 }>();
+
+const isMainTabsItem = computed(() => !isUndefined(index));
 </script>
 
 <template>
-  <nuxt-link :data-current="current" class="tabs-item flex-center p-mini relative">
+  <a :data-current="current" class="tabs-item flex-center p-mini relative">
     <slot />
-    <span class="tabs-item_close">×</span>
-  </nuxt-link>
+    <span v-if="isMainTabsItem" class="tabs-item_close">×</span>
+  </a>
 </template>
 
 <style scoped>
@@ -33,11 +36,11 @@ const { current } = defineProps<{
       border-right: 1px solid var(--gray-deep-2);
     }
 
-    &:first-child {
+    &:first-of-type {
       border-top-left-radius: var(--border-radius);
     }
 
-    &:last-child {
+    &:last-of-type {
       border-top-right-radius: var(--border-radius);
     }
 
@@ -54,8 +57,9 @@ const { current } = defineProps<{
     &[data-current = "true"] {
       --_brightness: 2;
     }
+  }
 
-    .tabs-item_close {
+  .tabs-item_close {
       position: absolute;
       right: var(--small);
 
@@ -69,6 +73,5 @@ const { current } = defineProps<{
         transform: scale(1.1);
       }
     }
-  }
 }
 </style>

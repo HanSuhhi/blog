@@ -1,9 +1,11 @@
 body {
   --_font-color: var(--white);
 
+  overflow: hidden;
+
   margin: 0;
+
   font-family:  "Fira Code", "Source Code Pro", monospace, fantasy;
   font-size: var(--font-body);
   color: var(--_font-color);
-  overflow: hidden;
 }
