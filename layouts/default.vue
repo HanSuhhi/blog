@@ -1,6 +1,6 @@
 <template>
   <div class="default-background flex-center">
-    <div class="default-background_main">
+    <div class="default-background_main relative">
       <BackgroundNoise />
       <slot />
     </div>

@@ -31,9 +31,9 @@ export default defineNuxtConfig({
       lintOnStart: false,
       fix: true
     }],
-    ["@nuxtjs/stylelint-module", {
-      fix: true
-    }],
+    // ["@nuxtjs/stylelint-module", {
+    //   fix: true
+    // }],
     "@nuxtjs/google-fonts",
     "@nuxt/content",
     "nuxt-lodash",
