@@ -1,0 +1,1 @@
+import{l as t,o as a,m as o,w as s,z as n,A as r}from"./entry.06389a72.js";const u=t({__name:"output",props:{tag:{default:"div"}},setup(_){return(e,l)=>(a(),o(r(e.tag),{class:"terminal-output relative"},{default:s(()=>[n(e.$slots,"default")]),_:3}))}});export{u as _};
