@@ -1,13 +1,13 @@
 <script setup lang="ts">
 const { pathname } = useRequestURL();
-const { routes, currentRoute } = useTerminalRoutes();
+const { routes, current_route, delete_route_by_index } = useTerminalRoutes();
 
 onMounted(() => {
   const index = routes.value.findIndex((item) => {
     if (!item) return pathname === "/";
     return pathname.includes(`/${item}`);
   });
-  currentRoute.value = index === -1 ? 0 : index;
+  current_route.value = index === -1 ? 0 : index;
 });
 </script>
 
@@ -16,9 +16,10 @@ onMounted(() => {
     <template #tabs>
       <template v-for="route, index of routes" :key="route">
         <terminal-tabs-item
-          :current="currentRoute === index"
+          :current="current_route === index"
           :index="index"
-          @click="currentRoute = index"
+          :delete-func="delete_route_by_index"
+          @click="current_route = index"
         >
           ~{{ getCurrentPath(route) }}
         </terminal-tabs-item>

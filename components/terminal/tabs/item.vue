@@ -1,7 +1,8 @@
 <script setup lang="ts">
-const { current, index } = defineProps<{
+const { current, index, deleteFunc } = defineProps<{
   current?: boolean
   index?: number
+  deleteFunc?: ReturnType<typeof useTerminalRoutes>["delete_route_by_index"]
 }>();
 
 const isMainTabsItem = computed(() => !isUndefined(index));
@@ -10,7 +11,7 @@ const isMainTabsItem = computed(() => !isUndefined(index));
 <template>
   <a :data-current="current" class="tabs-item flex-center p-mini relative">
     <slot />
-    <span v-if="isMainTabsItem" class="tabs-item_close">×</span>
+    <span v-if="isMainTabsItem" class="tabs-item_close flex-center" @click.stop="deleteFunc!(index!)">×</span>
   </a>
 </template>
 
@@ -60,17 +61,25 @@ const isMainTabsItem = computed(() => !isUndefined(index));
   }
 
   .tabs-item_close {
+      --_size: 15px;
+      --_border-radius: 2px;
+
       position: absolute;
       right: var(--small);
+
+      width: var(--_size);
+      height: var(--_size);
 
       font-size: var(--font-title);
 
       opacity: 0;
+      border-radius: var(--_border-radius);
 
-      transition: var(--transition-prop);
+      transition: transform var(--transition-prop);
 
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.8);
+       background-color: var(--gray-deep-2);
       }
     }
 }

@@ -7,9 +7,11 @@ enum PageEnum {
 
 function useCurrentKeys() {
   const { current } = useMagicKeys();
+  const { control_w } = useMagicKeys();
 
-  const shift_keys = computed(() => {
+  const control_nums = computed(() => {
     const currents = Array.from(current);
+
     if (currents.length !== 2) return 0;
     if (currents[0] !== "control") return 0;
 
@@ -18,26 +20,57 @@ function useCurrentKeys() {
     return may_number;
   });
 
-  return shift_keys;
+  return { control_nums, control_w };
 }
 
-export function useTerminalRoutes() {
-  const router = useRouter();
-
+function useRoutes() {
   const routes = useState<PageEnum[]>("tabs-route", () => [
     PageEnum.Root,
     PageEnum.Capabilitys,
     PageEnum.Todo,
     PageEnum.Posts
   ]);
-  const currentRoute = useState("terminal-current-route", () => 0);
 
-  watch(currentRoute, newRoute => router.replace({ path: `/${routes.value[newRoute]}` }));
+  const only_one_route = computed(() => routes.value.length === 1);
 
-  whenever(useCurrentKeys(), tabIndex => currentRoute.value = tabIndex - 1);
+  return { routes, only_one_route };
+}
+
+function useTerminalCurrentRoute(routes: Ref<PageEnum[]>) {
+  const router = useRouter();
+  const current_route = useState("terminal-current-route", () => 0);
+
+  watch(current_route, (new_route) => {
+    if (new_route < 0) return;
+    router.replace({ path: `/${routes.value[new_route]}` });
+  });
+
+  return current_route;
+}
+
+export function useTerminalRoutes() {
+  const { routes, only_one_route } = useRoutes();
+  const { control_nums, control_w } = useCurrentKeys();
+  const current_route = useTerminalCurrentRoute(routes);
+
+  const delete_route_by_index = (page_route: number) => {
+    if (only_one_route.value) return;
+
+    routes.value.splice(page_route, 1);
+
+    const temp_route = current_route.value;
+    const current_max_route = routes.value.length - 1;
+
+    current_route.value = -1;
+    setTimeout(() => current_route.value = (current_max_route >= temp_route) ? temp_route : current_max_route, 0);
+  };
+
+  whenever(control_nums, tabIndex => current_route.value = tabIndex - 1);
+  whenever(control_w, () => delete_route_by_index(current_route.value));
 
   return {
     routes,
-    currentRoute
+    delete_route_by_index,
+    current_route
   };
 }
