@@ -1,5 +1,6 @@
 :root {
   --flash: 0.1s;
   --moment: 0.2s;
+  --flicker: 0.75s;
   --second: 1s;
 }

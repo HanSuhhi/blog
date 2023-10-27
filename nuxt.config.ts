@@ -27,13 +27,13 @@ export default defineNuxtConfig({
     }
   },
   modules: [
-    // ["@nuxtjs/eslint-module", {
-    //   lintOnStart: false,
-    //   fix: true
-    // }],
-    // ["@nuxtjs/stylelint-module", {
-    //   fix: true
-    // }],
+    ["@nuxtjs/eslint-module", {
+      lintOnStart: false,
+      fix: true
+    }],
+    ["@nuxtjs/stylelint-module", {
+      fix: true
+    }],
     "@nuxtjs/google-fonts",
     "@nuxt/content",
     "nuxt-lodash",
